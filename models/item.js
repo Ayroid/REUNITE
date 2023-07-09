@@ -6,8 +6,7 @@ const itemSchema = new mongoose.Schema({
         required: true,
     },
     imageURL: {
-        type: Number,
-        unique: true,
+        type: String,
         required: true,
     },
     description: {

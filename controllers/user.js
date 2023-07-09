@@ -4,9 +4,34 @@ const bcrypt = require('bcrypt');
 // CUSTOM MODULES
 
 const { USER } = require('../models/user');
+const { GENERATETOKEN } = require('../authentication/jwt');
 
 const login = async (req, res) => {
-    res.send('login');
+    let data = { email, password } = req.body;
+
+    let user = await USER.findOne({ email: data.email });
+
+    if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+    }
+
+    const match = await bcrypt.compare(data.password, user.password);
+
+    if (match) {
+        let payload = {
+            userId: match._id,
+            username: match.username,
+        }
+        const accessToken = GENERATETOKEN(payload, "7d")
+        res.status(200).json({ accessToken: accessToken })
+    }
+
+    if (!match) {
+        return res.status(400).json({ message: 'Invalid Credentials' });
+    }
+
+    res.status(200).json({ message: 'User logged in successfully' });
+
 }
 
 const register = async (req, res) => {

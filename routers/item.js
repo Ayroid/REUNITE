@@ -1,9 +1,10 @@
 const express = require('express');
 const itemRouter = express.Router();
 
-const { getData, getSimilarData } = require('../controllers/item');
+const { getData, getSimilarData, createItem } = require('../controllers/item');
 
-itemRouter.post('/getData', getData);
-itemRouter.post('/getSimilarData', getSimilarData);
+itemRouter.get('/getData', getData)
+itemRouter.get('/getSimilarData', getSimilarData);
+itemRouter.post('/create', createItem);
 
 module.exports = itemRouter;
