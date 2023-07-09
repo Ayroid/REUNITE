@@ -16,7 +16,7 @@ app.set('views',path.resolve('./views'));
 
 // ROUTES
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    return res.render('hompage');
 });
 
 // ROUTERS
