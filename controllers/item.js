@@ -14,7 +14,23 @@ const getData = async (req, res) => {
 }
 
 const createItem = async (req, res) => {
-    const data = req.body;
+
+    let data = {
+        itemName,
+        description,
+        locationCoordinates,
+        location
+    } = req.body;
+
+    // data.submitterId = req.body.payload.userId;
+
+    let extraData  = {
+        submitterId: '1234567890',
+        imageURL: '......'
+    }
+
+    data = {...data, ...extraData};
+
     if (!data) {
         res.status(400).json({ error: "Please provide data to create an item" });
     }
@@ -25,4 +41,4 @@ const createItem = async (req, res) => {
 }
 
 
-module.exports = { getData, getSimilarData, createItem };
+module.exports = { getData, createItem };

@@ -18,8 +18,31 @@ function validateUserData(req, res, next) {
     }
 
     next();
-}   
+}
+
+function validateItem(req, res, next) {
+    const { itemName, description, location } = req.body;
+
+    if (!itemName || !description || !location) {
+        return res.status(400).json({ message: 'All fields are required' });
+    }
+
+    if (itemName.length < 2) {
+        return res.status(400).json({ message: 'Invalid Item Name' });
+    }
+
+    if (description.length < 6) {
+        return res.status(400).json({ message: 'Description should be at least 6 characters long' });
+    }
+
+    if (location.length < 2) {
+        return res.status(400).json({ message: 'Invalid Location' });
+    }
+
+    next();
+}
 
 module.exports = {
-    VALIDATEREGISTER : validateUserData
+    VALIDATEREGISTER: validateUserData,
+    VALIDATEITEM: validateItem
 };
