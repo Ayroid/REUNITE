@@ -22,7 +22,7 @@ const login = async (req, res) => {
             userId: match._id,
             username: match.username,
         }
-        const accessToken = GENERATETOKEN(payload, "7d")
+        const accessToken = GENERATETOKEN(payload, "30d")
         res.status(200).json({ accessToken: accessToken })
     }
 

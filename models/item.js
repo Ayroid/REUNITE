@@ -3,28 +3,32 @@ const mongoose = require('mongoose');
 const itemSchema = new mongoose.Schema({
     itemName: {
         type: String,
-        required: true,
+        required: [true,"please provide name"],
     },
     imageURL: {
         type: String,
-        required: true,
+        required: [trur,"please provide image url"],
     },
     description: {
         type: String,
-        required: true,
+        required: [true,"please provide description"],
     },
     locationCoordinates: {
         type: Object,  // {lat: 123, long: 123}
-        required: true,
     },
     location: {
         type: String,
-        required: true,
+        required: [true,"please provide your location"],
     },
     timeReported: {
         type: Date,
         required: true,
         default: Date.now()
+    },
+    userIds: {
+        type: Array,
+        required: true,
+        default: []
     },
 });
 

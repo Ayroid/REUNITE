@@ -25,8 +25,4 @@ const createItem = async (req, res) => {
 }
 
 
-const getSimilarData = async (req, res) => {
-    res.send('get similar items');
-}
-
 module.exports = { getData, getSimilarData, createItem };
