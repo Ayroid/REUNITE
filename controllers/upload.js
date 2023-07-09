@@ -1,5 +1,5 @@
-const uploads = async (req,res)=>{
+const uploads = async (req, res) => {
         res.send('uploads')
 }
 
-module.exports = {uploads};
+module.exports = { uploads };

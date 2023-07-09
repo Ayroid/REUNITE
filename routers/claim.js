@@ -1,3 +1,9 @@
 const express = require('express');
-const router = express.Router();
+const claimRouter = express.Router();
 
+
+const { claim } = require('../controllers/claim');
+
+claimRouter.post('/claim', claim);
+
+module.exports = claimRouter;

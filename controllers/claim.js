@@ -1,3 +1,5 @@
-const claim => async (req,res)=>{
-    res.send('clm')
+const claim = async (req, res) => {
+    res.send('claim')
 }
+
+module.exports = { claim };
