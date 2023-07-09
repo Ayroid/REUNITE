@@ -6,17 +6,25 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+// CUSTOM MODULES
+
+const { CONNECT } = require('./models/database');
+
+// CONNECT TO DATABASE
+CONNECT();
+
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('view engine','ejs');
-app.set('views',path.resolve('./views'));
+app.set('view engine', 'ejs');
+app.set('views', path.resolve('./views'));
 
 // ROUTES
 app.get('/', (req, res) => {
-    return res.render('hompage');
+    return res.render('home');
 });
 
 // ROUTERS

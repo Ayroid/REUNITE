@@ -29,8 +29,8 @@ const itemSchema = new mongoose.Schema({
     },
 });
 
-const User = mongoose.model('user', itemSchema);
+const item = mongoose.model('item', itemSchema);
 
 module.exports = {
-    USER: User
+    ITEM: item
 };
