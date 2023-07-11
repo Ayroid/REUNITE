@@ -19,8 +19,8 @@ const login = async (req, res) => {
 
     if (match) {
         let payload = {
-            userId: match._id,
-            username: match.username,
+            userId: user._id,
+            username: user.username,
         }
         const accessToken = GENERATETOKEN(payload, "30d")
         res.status(200).json({ accessToken: accessToken })
@@ -29,9 +29,6 @@ const login = async (req, res) => {
     if (!match) {
         return res.status(400).json({ message: 'Invalid Credentials' });
     }
-
-    res.status(200).json({ message: 'User logged in successfully' });
-
 }
 
 const register = async (req, res) => {
