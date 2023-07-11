@@ -18,7 +18,12 @@ const itemSchema = new mongoose.Schema({
         required: [true, "please provide description"],
     },
     locationCoordinates: {
-        type: Object,  // {lat: 123, long: 123}
+        lat:{
+            type:Number,
+        },
+        long:{
+            type:Number,
+        }// {lat: 123, long: 123}
     },
     location: {
         type: String,
