@@ -18,12 +18,12 @@ const login = async (req, res) => {
     const match = await bcrypt.compare(data.password, user.password);
 
     if (match) {
-        let payload = {
-            userId: user._id,
-            username: user.username,
-        }
-        const accessToken = GENERATETOKEN(payload, "30d")
-        res.status(200).json({ accessToken: accessToken })
+        // let payload = {
+        //     userId: user._id,
+        //     username: user.username,
+        // }
+        // const accessToken = GENERATETOKEN(payload, "30d")
+        res.status(200).redirect('/');
     }
 
     if (!match) {

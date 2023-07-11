@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
-    <form action="/uploads/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="lostImage">
-        <button type="submit">Upload</button>
-    </form>
+    <div class="main-div">
+        <div class="content">
+            <div class="detail-box">
+                <div class="detail-box-heading">
+                    <h2>UPLOAD ITEM</h2>
+                </div>
+                <form action="/upload" method="post" class="form upload-form">
+                    <!-- <label for="itemName">Item Name</label> -->
+                    <input type="text" name="itemName" id="itemName" placeholder="Item Name" required>
 
-    <!--button for getting the coordinates-->
-    <button onclick="getLocation()">Get Co-Ordinates</button>
-    <!-- this element displays the coordinates-->
-    <p id="coordinates"></p>
+                    <div class="image-upload">
+                        <div class="image-preview"></div>
+                        <input type="file" id="imageUpload" accept="image/*">
+                        <label for="imageUpload" class="image-upload-label">Upload Image</label>
+                    </div>
 
+                    <!-- <label for="description">Description</label> -->
+                    <textarea name="description" id="description" placeholder="Description" rows="5"
+                        required></textarea>
 
+                    <!-- <label for="location">Location</label> -->
+                    <input type="text" name="location" id="location" placeholder="Location" required>
 
-    <script>
-        var coordinates = document.getElementById('coordinates');
+                    <button type="submit">UPLOAD</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-        function getLocation(){
-            if(navigator.geolocation){
-                navigator.geolocation.watchPosition(showPosition);
-            }else{
-                coordinates.innerHTML = "geolocation is not supported in your broswer";
-            }
-        }
-
-        function showPosition(position) {
-            coordinates.innerHTML="Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-        }
-
-    </script>
-
+    <script src="/js/home"></script>
 
 </body>
+
 </html>
