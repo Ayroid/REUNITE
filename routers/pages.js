@@ -5,7 +5,7 @@ pageRouter.get('/', (req, res) => {
 
     // CHECK IF JWT IS VALID, REDIRECT TO HOME PAGE ELSE REDIRECT TO LOGIN PAGE
 
-    res.render('login');
+    res.render('home');
 });
 
 pageRouter.get('/login', (req, res) => {

@@ -10,5 +10,32 @@
         <input type="file" name="lostImage">
         <button type="submit">Upload</button>
     </form>
+
+    <!--button for getting the coordinates-->
+    <button onclick="getLocation()">Get Co-Ordinates</button>
+    <!-- this element displays the coordinates-->
+    <p id="coordinates"></p>
+
+
+
+    <script>
+        var coordinates = document.getElementById('coordinates');
+
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.watchPosition(showPosition);
+            }else{
+                coordinates.innerHTML = "geolocation is not supported in your broswer";
+            }
+        }
+
+        function showPosition(position) {
+            coordinates.innerHTML="Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+    </script>
+
+
 </body>
 </html>

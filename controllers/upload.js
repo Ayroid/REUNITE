@@ -19,9 +19,7 @@ const uploads = async (req, res) => {
 			return res.status(400).json({ error: err.message });
 		}
 
-		console.log(result);
-
-		res.send(result.filename);
+		res.send('image upload sucessfull');
 	});
 };
 
