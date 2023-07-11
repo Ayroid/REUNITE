@@ -67,7 +67,7 @@ const register = async (req, res) => {
         let newUser = new USER(data);
         newUser.save()
             .then((user) => {
-                res.status(200).json({ message: 'User registered successfully' });
+                res.status(200).redirect('/login');
             }
             ).catch((err) => {
                 res.status(500).json({ error: err });
