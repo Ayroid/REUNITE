@@ -12,3 +12,7 @@ userRouter.post('/login', login);
 userRouter.post('/register', VALIDATEREGISTER, register);
 
 module.exports = userRouter;
+
+
+
+

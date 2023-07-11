@@ -1,5 +1,6 @@
 const { ITEM } = require('../models/item');
 const getData = async (req, res) => {
+    console.log(req.body.payload);
     
     const page = Number(req.query.page) || 1
     const limit = Number(req.query.limit) || 10
