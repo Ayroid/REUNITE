@@ -49,6 +49,8 @@ body {
 .upload-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-self: center;
 }
 
 .upload-form label {
@@ -58,13 +60,13 @@ body {
 
 .upload-form input[type="text"],
 .upload-form textarea {
-    width: 100%;
     border: none;
     border-bottom: 1px solid #ccc;
     padding: 0.5rem;
     margin-bottom: 1rem;
     font-size: 1rem;
     resize: none;
+    width: 24rem;
 }
 
 .upload-form input[type="text"]:focus,

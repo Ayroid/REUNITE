@@ -23,4 +23,6 @@ const uploads = async (req, res) => {
 	});
 };
 
+
+
 module.exports = { uploads };
