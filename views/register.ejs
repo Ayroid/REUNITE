@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>REGISTER</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
 </head>
+
 <body>
-    
+    <div class="main-div">
+        <div class="main-heading">
+            <h1>REUNITE</h1>
+            <hr class="custom-line">
+        </div>
+        <div class="content">
+            <div class="detail-box">
+                <div class="detail-box-heading" style="margin: 3rem 0;">
+                    <h2>REGISTER</h2>
+                </div>
+                <form action="/user/register" method="post" class="form">
+                    <input type="username" name="username" id="username" placeholder="USERNAME" required>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" required>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" required>   
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="CONFIRM PASSWORD" required> 
+                    <button type="submit">LOGIN</button>    
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
