@@ -36,6 +36,12 @@ const register = async (req, res) => {
 
         let data = { username, email, password } = req.body;
 
+        const user = await USER.findOne({ email: data.email });
+
+        if (user) {
+            return res.status(400).redirect('/register');
+        }
+
         const salt = await new Promise((resolve, reject) => {
             bcrypt.genSalt(Number(process.env.SALTROUNDS), (err, salt) => {
                 if (err) {
@@ -64,7 +70,7 @@ const register = async (req, res) => {
                 res.status(200).json({ message: 'User registered successfully' });
             }
             ).catch((err) => {
-                res.status(500).json({ error: 'INTERNAL SERVER ERROR' });
+                res.status(500).json({ error: err });
             });
     } catch (err) {
         console.log(err);

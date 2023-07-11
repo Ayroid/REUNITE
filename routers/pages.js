@@ -16,6 +16,10 @@ pageRouter.get('/register', (req, res) => {
     res.render('register');
 });
 
+pageRouter.get('/error', (req, res) => {
+    res.render('error');
+});
+
 module.exports = pageRouter;
 
 
