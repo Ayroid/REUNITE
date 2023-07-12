@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // CUSTOM MODULES
 
 const { CONNECT } = require('./models/database');
-const { VERIFYTOKEN } = require('./authentication/jwt');
+// const { VERIFYTOKEN } = require('./authentication/jwt');
 
 // CONNECT TO DATABASE
 CONNECT();
