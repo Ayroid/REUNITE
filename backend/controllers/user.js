@@ -12,7 +12,7 @@ const login = async (req, res) => {
     let user = await USER.findOne({ email: data.email });
 
     if (!user) {
-        return res.redirect('http://localhost:4000/login');
+        return res.redirect('http://192.168.49.2:30080/login');
     }
 
     const match = await bcrypt.compare(data.password, user.password);
@@ -23,12 +23,12 @@ const login = async (req, res) => {
         //     username: user.username,
         // }
         // const accessToken = GENERATETOKEN(payload, "30d")
-        res.status(200).redirect('http://localhost:4000/');
+        res.status(200).redirect('http://192.168.49.2:30080/');
     }
 
     if (!match) {
         console.log('here');
-        return res.redirect('http://localhost:4000/login');
+        return res.redirect('http://192.168.49.2:30080/login');
     }
 }
 
@@ -40,7 +40,7 @@ const register = async (req, res) => {
         const user = await USER.findOne({ email: data.email });
 
         if (user) {
-            return res.status(400).redirect('http://localhost:4000/register');
+            return res.status(400).redirect('http://192.168.49.2:30080/register');
         }
 
         const salt = await new Promise((resolve, reject) => {
@@ -68,7 +68,7 @@ const register = async (req, res) => {
         let newUser = new USER(data);
         newUser.save()
             .then((user) => {
-                res.status(200).redirect('http://localhost:4000/login');
+                res.status(200).redirect('http://192.168.49.2:30080/login');
             }
             ).catch((err) => {
                 res.status(500).json({ error: err });

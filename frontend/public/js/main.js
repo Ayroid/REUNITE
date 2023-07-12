@@ -34,7 +34,7 @@ async function renderItems() {
   const container = document.getElementById('container')
 
   try {
-    const response = await fetch('http://localhost:3000/item/getData')
+    const response = await fetch('http://192.168.49.2:30081/item/getData')
     const data = await response.json()
 
     data.items.forEach((item) => {
