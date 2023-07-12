@@ -11,14 +11,14 @@ function createItemDiv(item) {
   itemName.textContent = item.itemName
 
   const description = document.createElement('p')
-  description.textContent = item.description
+  description.innerHTML = `<strong>DESCRIPTION</strong> <br> ${item.description}`
 
 
   const location = document.createElement('p');
-  location.textContent = item.location;
+  location.innerHTML = `<strong>LOCATION</strong> <br> ${item.location}`
 
-  const claimersCount = document.createElement('p')
-  claimersCount.textContent = `Claimers: ${item.claimers.length}`
+  // const claimersCount = document.createElement('p')
+  // claimersCount.textContent = `Claimers: ${item.claimers.length}`
 
   div.appendChild(image)
   div.appendChild(itemName)
@@ -36,8 +36,6 @@ async function renderItems() {
   try {
     const response = await fetch('http://localhost:3000/item/getData')
     const data = await response.json()
-    
-    console.log(data);
 
     data.items.forEach((item) => {
       const itemDiv = createItemDiv(item)
@@ -52,20 +50,20 @@ async function renderItems() {
 renderItems()
 
 
-fetch('http://localhost:3000/api/images')
-  .then((response) => response.json())
-  .then((data) => {
-    const imageContainer = document.getElementById('image-container')
+// fetch('http://localhost:3000/api/images')
+//   .then((response) => response.json())
+//   .then((data) => {
+//     const imageContainer = document.getElementById('image-container')
 
-    data.images.forEach((filename) => {
-      const img = document.createElement('img')
-      img.src = `/images/${filename}`
-      img.alt = filename // Set alt attribute for accessibility
+//     data.images.forEach((filename) => {
+//       const img = document.createElement('img')
+//       img.src = `/images/${filename}`
+//       img.alt = filename // Set alt attribute for accessibility
 
-      imageContainer.appendChild(img)
-    })
-  })
-  .catch((error) => {
-    console.error('Error fetching images:', error)
-  })
+//       imageContainer.appendChild(img)
+//     })
+//   })
+//   .catch((error) => {
+//     console.error('Error fetching images:', error)
+//   })
 

@@ -4,42 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <title>ReUnite HomePage</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <div class="main-div">
-        <div class="content">
-            <div class="detail-box">
-                <div class="detail-box-heading">
-                    <h2>UPLOAD ITEM</h2>
-                </div>
-                <form action="/uploads/upload" method="post" class="form upload-form" enctype="multipart/form-data">
-                    <!-- <label for="itemName">Item Name</label> -->
-                    <input type="text" name="itemName" id="itemName" placeholder="Item Name" required>
-
-                    <div class="image-upload">
-                        <div class="image-preview"></div>
-                        <input type="file" id="imageUpload" name="image">
-                        <label for="imageUpload" class="image-upload-label">Upload Image</label>
-                    </div>
-
-                    <!-- <label for="description">Description</label> -->
-                    <textarea name="description" id="description" placeholder="Description" rows="5"
-                        required></textarea>
-
-                    <!-- <label for="location">Location</label> -->
-                    <input type="text" name="location" id="location" placeholder="Location" required>
-
-                    <button type="submit">UPLOAD</button>
-                </form>
-            </div>
+    <header>
+        <h1>REUNITE</h1>
+    </header>
+    <div id="container"></div>
+    <div id="image-container"></div>
+    <a href="http://localhost:3000/upload">
+        <div class="addButton">
+            <p>ADD</p>
         </div>
-    </div>
-
-    <script src="/js/home.js"></script>
-
+    </a>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -53,7 +53,7 @@ const createItem = async (req, res) => {
     // value.counter = value.counter + 1;
     // await COUNTER.updateOne({ _id: value._id }, { $set: { counter: value.counter } });
 
-    res.status(200).json({ item: item });
+    res.status(200).redirect('/');
 }
 
 

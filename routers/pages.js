@@ -8,6 +8,10 @@ pageRouter.get('/', (req, res) => {
     res.render('home');
 });
 
+pageRouter.get('/upload', (req, res) => {
+    res.render('upload');
+});
+
 pageRouter.get('/login', (req, res) => {
     res.render('login');
 });
