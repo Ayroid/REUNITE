@@ -37,6 +37,27 @@ app.use('/user', userRouter);
 app.use('/uploads', uploadsRouter);
 app.use('/item', itemRouter);
 
+//api route to serve images
+const fs = require('fs');
+
+app.get('/api/images', (req, res) => {
+    const uploadFolderPath = path.join(__dirname, 'public', 'upload');
+
+    fs.readdir(uploadFolderPath, (err, files) => {
+        if (err) {
+            console.error('Error reading upload folder:', err);
+            res.status(500).json({ error: 'Failed to retrieve images' });
+        } else {
+            const images = files.filter(file => {
+                const extension = path.extname(file).toLowerCase();
+                return extension === '.jpg' || extension === '.jpeg' || extension === '.png';
+            });
+
+            res.json({ images });
+        }
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server listening on port: ${PORT}`);
 });
