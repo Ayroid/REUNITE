@@ -33,3 +33,48 @@ imageUpload.addEventListener("change", () => {
         imagePreview.classList.remove("active");
     }
 });
+
+
+// document.getElementById('myForm').addEventListener('submit', function(event) {
+//   event.preventDefault(); // Prevent the form from submitting normally
+  
+//   const formData = new FormData(this); // Create a new FormData object from the form
+  
+//   // Send the form data to the backend
+//   fetch('/user/login', {
+//     method: 'POST', // Use the appropriate HTTP method
+//     body: formData // Pass the form data as the request body
+//   })
+//   .then(response => {
+//     // Handle the response
+//     localStorage.setItem('jwtToken', response.token);
+//     console.log(response);
+//   })
+//   .catch(error => {
+//     // Handle any errors
+//     console.error(error);
+//   });
+// });
+
+
+// // Assuming you have received the JWT token as a JSON object called 'response' from the server
+
+// // Store the token securely in the browser's local storage
+// localStorage.setItem('jwtToken', response.token);
+
+// // Retrieve the token from local storage
+// const jwtToken = localStorage.getItem('jwtToken');
+
+// // Include the token in subsequent requests
+// fetch('https://api.example.com/data', {
+//   method: 'GET',
+//   headers: {
+//     'Authorization': `${jwtToken}`
+//   }
+// })
+// .then(response => {
+//   // Process the response
+// })
+// .catch(error => {
+//   // Handle the error
+// });

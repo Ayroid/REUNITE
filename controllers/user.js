@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 // CUSTOM MODULES
 
 const { USER } = require('../models/user');
-const { GENERATETOKEN } = require('../authentication/jwt');
+// const { GENERATETOKEN } = require('../authentication/jwt');
 
 const login = async (req, res) => {
     let data = { email, password } = req.body;
@@ -27,6 +27,7 @@ const login = async (req, res) => {
     }
 
     if (!match) {
+        console.log('here');
         return res.redirect('/login');
     }
 }

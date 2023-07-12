@@ -1,7 +1,7 @@
 const { ITEM } = require('../models/item');
 const getData = async (req, res) => {
     console.log(req.body.payload);
-    
+
     const page = Number(req.query.page) || 1
     const limit = Number(req.query.limit) || 10
     const skip = (page - 1) * limit;
@@ -25,12 +25,14 @@ const createItem = async (req, res) => {
 
     // data.submitterId = req.body.payload.userId;
 
-    let extraData  = {
-        submitterId: '1234567890',
-        imageURL: '......'
+
+    let extraData = {
+        // submitterId: '1234567890',
+        imageName: req.body.image,
+        imageURL: `http://localhost:3000/uploads/${req.body.image}`
     }
 
-    data = {...data, ...extraData};
+    data = { ...data, ...extraData };
 
     if (!data) {
         res.status(400).json({ error: "Please provide data to create an item" });

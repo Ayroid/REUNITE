@@ -15,13 +15,13 @@
                 <div class="detail-box-heading">
                     <h2>UPLOAD ITEM</h2>
                 </div>
-                <form action="/uploads/upload" method="post" class="form upload-form">
+                <form action="/uploads/upload" method="post" class="form upload-form" enctype="multipart/form-data">
                     <!-- <label for="itemName">Item Name</label> -->
                     <input type="text" name="itemName" id="itemName" placeholder="Item Name" required>
 
                     <div class="image-upload">
                         <div class="image-preview"></div>
-                        <input type="file" id="imageUpload" name="lostImage" accept="image/*">
+                        <input type="file" id="imageUpload" name="image">
                         <label for="imageUpload" class="image-upload-label">Upload Image</label>
                     </div>
 

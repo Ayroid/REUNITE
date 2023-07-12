@@ -5,24 +5,26 @@ const itemSchema = new mongoose.Schema({
         type: String,
         required: [true, "please provide name"],
     },
+    imageName: {
+        type: String,
+    },
     imageURL: {
         type: String,
-        unique: false,
     },
-    submitterId: {
-        type: String,
-        required: [true, "please provide submitter id"],
-    },
+    // submitterId: {
+    //     type: String,
+    //     required: [true, "please provide submitter id"],
+    // },
     description: {
         type: String,
         required: [true, "please provide description"],
     },
     locationCoordinates: {
-        lat:{
-            type:Number,
+        lat: {
+            type: Number,
         },
-        long:{
-            type:Number,
+        long: {
+            type: Number,
         }// {lat: 123, long: 123}
     },
     location: {
