@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="main-heading">
+            <h1>REUNITE</h1>
+            <hr class="custom-line">
+        </div>
+        <div class="content">
+            <div class="detail-box">
+                <div class="detail-box-heading">
+                    <h2>LOGIN</h2>
+                </div>
+                <form action="http://localhost:3000/user/login" method="post" class="form" id="loginForm">
+                    <input type="email" name="email" id="email" placeholder="EMAIL" required>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" required>    
+                    <button type="submit">LOGIN</button>
+                    <div class="redirect-page">New user? <a href="/register">Register</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

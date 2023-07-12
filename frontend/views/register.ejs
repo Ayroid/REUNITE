@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="main-heading">
+            <h1>REUNITE</h1>
+            <hr class="custom-line">
+        </div>
+        <div class="content">
+            <div class="detail-box">
+                <div class="errors">
+                    <%= locals.message %>
+                </div>
+                <div class="detail-box-heading" style="margin: 3rem 0;">
+                    <h2>REGISTER</h2>
+                </div>
+                <form action="http://localhost:3000/user/register" method="post" class="form">
+                    <input type="username" name="username" id="username" placeholder="USERNAME" required>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" required>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" required minlength="6">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="CONFIRM PASSWORD"
+                        required minlength="6" oninput="confirmPasswordCheck()">
+                    <img src="/images/logos/caution.png" alt="" class="cautionlogo" id="cautionlogo">
+                    <button type="submit" id="button">LOGIN</button>
+                    <div class="redirect-page">Already registered? <a href="/login">Login</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function confirmPasswordCheck() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var logo = document.getElementById("cautionlogo");
+            if (password != confirmPassword) {
+                logo.style.display = "block";
+                button.disabled = true;
+
+            } else {
+                logo.style.display = "none";
+                button.disabled = false;
+            }
+            if (password.length == 0 || confirmPassword.length == 0) {
+                logo.style.display = "none";
+                button.disabled = false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
