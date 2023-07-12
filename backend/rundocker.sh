@@ -1,14 +1,10 @@
 #!/bin/bash
 set -e
-# Build the docker image
 
-DOCKERFILE="frontend.Dockerfile"
-IMAGE="ayroid/lostfoundfe"
-
-docker build -t $IMAGE -f $DOCKERFILE .
+IMAGE="ayroid/lostfoundbe"
 
 docker run -d \
-    -p 4000:4000 \
+    -p 3000:3000 \
     -v "$PWD":/usr/src/myapp \
     -v myvolume:/usr/src/myapp/node_modules \
     -w /usr/src/myapp \
