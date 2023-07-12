@@ -8,7 +8,7 @@ const getData = async (req, res) => {
 
     let result = ITEM.find({});
 
-    result = result.skip(skip).limit(limit);
+    // result = result.skip(skip).limit(limit);
 
     const items = await result;
     res.status(200).json({ items });
@@ -42,6 +42,7 @@ const createItem = async (req, res) => {
     await item.save();
     res.status(200).json({ item: item });
 }
+
 
 
 module.exports = { getData, createItem };
