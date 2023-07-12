@@ -38,7 +38,7 @@ const createItem = async (req, res) => {
     let extraData = {
         // submitterId: '1234567890',
         imageName: req.files.image[0].originalname,
-        imageURL: `http://localhost:3000/uploads/${req.files.image[0].originalname}`
+        imageURL: `http://localhost:3000/upload/${req.files.image[0].originalname}`
     }
 
     data = { ...data, ...extraData };
