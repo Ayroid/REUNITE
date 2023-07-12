@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lostfoundfe-deployment
+  labels:
+    app: lostfoundfe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lostfoundfe
+  template:
+    metadata:
+      labels:
+        app: lostfoundfe
+    spec:
+      containers:
+        - name: lostfoundfeserver
+          image: ayroid/lostfoundfe:latest
+          ports:
+            - containerPort: 4000

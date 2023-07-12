@@ -3,11 +3,11 @@ set -e
 # Build the docker image
 
 DOCKERFILE="frontend.Dockerfile"
-IMAGE="lostfoundfe"
+IMAGE="ayroid/lostfoundfe"
 
 docker build -t $IMAGE -f $DOCKERFILE .
 
-docker run -it \
+docker run -d \
     -p 4000:4000 \
     -v "$PWD":/usr/src/myapp \
     -v myvolume:/usr/src/myapp/node_modules \
