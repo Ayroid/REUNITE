@@ -1,4 +1,7 @@
 const { ITEM } = require('../models/item');
+const { COUNTER } = require('../models/counter');
+const path = require('path');
+
 const getData = async (req, res) => {
     console.log(req.body.payload);
 
@@ -13,8 +16,15 @@ const getData = async (req, res) => {
     const items = await result;
     res.status(200).json({ items });
 }
-
+// submitterId: '1234567890',
 const createItem = async (req, res) => {
+
+    // let value = await COUNTER.findOne({});
+
+    // if (!value) {
+    //     value = await COUNTER({ counter: 1 });
+    //     await value.save();
+    // }
 
     let data = {
         itemName,
@@ -25,11 +35,10 @@ const createItem = async (req, res) => {
 
     // data.submitterId = req.body.payload.userId;
 
-
     let extraData = {
         // submitterId: '1234567890',
-        imageName: req.body.image,
-        imageURL: `http://localhost:3000/uploads/${req.body.image}`
+        imageName: req.files.image[0].originalname,
+        imageURL: `http://localhost:3000/uploads/${req.files.image[0].originalname}`
     }
 
     data = { ...data, ...extraData };
@@ -40,6 +49,10 @@ const createItem = async (req, res) => {
 
     const item = await ITEM(data);
     await item.save();
+
+    // value.counter = value.counter + 1;
+    // await COUNTER.updateOne({ _id: value._id }, { $set: { counter: value.counter } });
+
     res.status(200).json({ item: item });
 }
 
