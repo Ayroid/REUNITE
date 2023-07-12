@@ -5,7 +5,6 @@ const userRouter = express.Router();
 
 const { VALIDATEREGISTER } = require('../middleware/user');
 
-
 const { login, register } = require('../controllers/user');
 
 userRouter.post('/login', login);
