@@ -4,7 +4,7 @@ FROM node
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package.json ./
 
 # Install project dependencies
 RUN npm install
