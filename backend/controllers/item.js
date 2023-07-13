@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { ITEM } = require('../models/item');
 const { COUNTER } = require('../models/counter');
 const path = require('path');
@@ -38,7 +40,7 @@ const createItem = async (req, res) => {
     let extraData = {
         // submitterId: '1234567890',
         imageName: req.files.image[0].originalname,
-        imageURL: `http://192.168.49.2:30081/upload/${req.files.image[0].originalname}`
+        imageURL: `http://localhost:3000/upload/${req.files.image[0].originalname}`
     }
 
     data = { ...data, ...extraData };
@@ -53,7 +55,7 @@ const createItem = async (req, res) => {
     // value.counter = value.counter + 1;
     // await COUNTER.updateOne({ _id: value._id }, { $set: { counter: value.counter } });
 
-    res.status(200).redirect('http://192.168.49.2:30080/');
+    res.status(200).redirect('http://localhost:4000/');
 }
 
 

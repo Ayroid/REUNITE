@@ -7,7 +7,7 @@ IMAGE="ayroid/lostfoundbe"
 
 docker build -t $IMAGE -f $DOCKERFILE .
 
-docker run -d \
+docker run -it \
     -p 3000:3000 \
     -v "$PWD":/usr/src/myapp \
     -v myvolume:/usr/src/myapp/node_modules \
