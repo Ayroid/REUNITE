@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'docker'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
+    }
+  }
+
 
   stages {
     stage('Pull and Run') {
