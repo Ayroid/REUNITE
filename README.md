@@ -1,16 +1,5 @@
 # Lost & Found Application
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 The Lost & Found Application is a web-based platform designed to help individuals report lost items and search for found items. It provides a simple and user-friendly interface for users to report their lost belongings and for others to post items they have found. This application aims to reunite people with their lost possessions and promote community engagement.
