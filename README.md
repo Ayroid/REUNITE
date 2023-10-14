@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Lost & Found Application is a web-based platform designed to help individuals report lost items and search for found items. It provides a simple and user-friendly interface for users to report their lost belongings and for others to post items they have found. This application aims to reunite people with their lost possessions and promote community engagement.
+REUNITE is a web-based platform designed to help individuals report lost items and search for found items. It provides a simple and user-friendly interface for users to report their lost belongings and for others to post items they have found. This application aims to reunite people with their lost possessions and promote community engagement.
 
 ## Features
 
@@ -17,7 +17,7 @@ The Lost & Found Application is a web-based platform designed to help individual
 
 ## Getting Started
 
-Follow these instructions to get a copy of the Lost & Found Application up and running on your local machine for development and testing purposes.
+Follow these instructions to get a copy of the REUNITE Application up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -27,6 +27,7 @@ Before you begin, make sure you have the following software and tools installed 
 - NPM (Node Package Manager)
 - MongoDB
 - Git
+- Docker
 
 ### Installation
 
@@ -56,7 +57,7 @@ Before you begin, make sure you have the following software and tools installed 
    npm start
    ```
 
-The Lost & Found Application should now be running locally.
+The REUNITE Application should now be running locally.
 
 ## Usage
 
@@ -73,7 +74,7 @@ The application also supports administrator accounts for managing users and repo
 
 ## Contributing
 
-We welcome contributions from the open-source community. To contribute to the Lost & Found Application, follow these steps:
+We welcome contributions from the open-source community. To contribute to the REUNITE Application, follow these steps:
 
 1. Fork the repository to your GitHub account.
 2. Create a new branch for your feature or bug fix.
@@ -89,4 +90,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Thank you for using the Lost & Found Application! We hope this platform helps reconnect people with their lost items and promotes a sense of community. If you have any questions or encounter issues, please feel free to reach out to us via the [GitHub Issues](https://github.com/your-username/lost-and-found-app/issues) page.
+Thank you for using the REUNITE Application! We hope this platform helps reconnect people with their lost items and promotes a sense of community. If you have any questions or encounter issues, please feel free to reach out to us via the [GitHub Issues](https://github.com/your-username/lost-and-found-app/issues) page.
