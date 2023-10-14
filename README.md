@@ -44,13 +44,13 @@ Before you begin, make sure you have the following software and tools installed 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/lost-and-found-app.git
+   https://github.com/Ayroid/REUNITE.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd lost-and-found-app
+   cd REUNITE
    ```
 
 3. Install the project dependencies:
