@@ -22,10 +22,17 @@
                     <h2>LOGIN</h2>
                 </div>
                 <form action="http://localhost:3000/user/login" method="post" class="form" id="loginForm">
-                    <input type="email" name="email" id="email" placeholder="EMAIL" required>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" required>    
+                    <input type="email" name="email" id="email" placeholder="EMAIL" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" required>
+                    <!-- Paste the "Remember Me" checkbox code here -->
+                    <label>
+                        <input type="checkbox" name="rememberMe" id="rememberMe">
+                        <span>Remember Me</span>
+                    </label>
+                    <!-- End of "Remember Me" checkbox code -->
                     <button type="submit">LOGIN</button>
                     <div class="redirect-page">New user? <a href="/register">Register</a></div>
+                    <div class="error-message" id="errorMessage"></div>
                 </form>
             </div>
         </div>
