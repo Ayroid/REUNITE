@@ -41,26 +41,26 @@ imageUpload.addEventListener("change", () => {
 });
 
 
-// document.getElementById('myForm').addEventListener('submit', function(event) {
-//   event.preventDefault(); // Prevent the form from submitting normally
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
   
-//   const formData = new FormData(this); // Create a new FormData object from the form
+  const formData = new FormData(this); // Create a new FormData object from the form
   
-//   // Send the form data to the backend
-//   fetch('/user/login', {
-//     method: 'POST', // Use the appropriate HTTP method
-//     body: formData // Pass the form data as the request body
-//   })
-//   .then(response => {
-//     // Handle the response
-//     localStorage.setItem('jwtToken', response.token);
-//     console.log(response);
-//   })
-//   .catch(error => {
-//     // Handle any errors
-//     console.error(error);
-//   });
-// });
+  // Send the form data to the backend
+  fetch('/user/login', {
+    method: 'POST', // Use the appropriate HTTP method
+    body: formData // Pass the form data as the request body
+  })
+  .then(response => {
+    // Handle the response
+    localStorage.setItem('jwtToken', response.token);
+    console.log(response);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+});
 
 
 // // Assuming you have received the JWT token as a JSON object called 'response' from the server
