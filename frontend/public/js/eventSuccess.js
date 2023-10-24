@@ -36,4 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         backToHome.style.opacity = '1';
     }, 4500);
 
+    setTimeout(() => {
+        tickMark.style.display = 'none';
+        mainBox.style.display = 'flex';
+        mainBoxText.classList.add('popup');
+        mainBoxHeading.style.opacity = '1';
+        mainBoxText.style.opacity = '1';
+    }, 5500);
+
 })
