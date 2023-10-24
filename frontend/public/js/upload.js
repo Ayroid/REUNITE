@@ -84,3 +84,15 @@ fetch('https://api.example.com/data', {
 .catch(error => {
   // Handle the error
 });
+
+
+document.getElementById('myForm').addEventListener('fetch', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    const formData = new FormData(this); // Create a new FormData object from the form
+    // fetch the form data to the backend
+    fetch('/user/login', {
+      method: 'GET', 
+      body: formData 
+    })
+  });
