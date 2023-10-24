@@ -175,5 +175,21 @@
     .textBox a {
         font-size: 1rem;
     }
+}
 
+/* User Notification */
+.notification {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.notification-text {
+    margin: 0;
 }
