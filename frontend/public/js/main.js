@@ -25,7 +25,13 @@ function createItemDiv(item) {
   div.appendChild(description)
   div.appendChild(location)
 
-  return div
+  div.addEventListener('click', () => {
+    // Create and display a modal with additional item details
+    // You can use a library like Bootstrap Modal or create a custom one
+    // Populate the modal with item details like price, seller info, etc.
+  });
+
+  return div;
 }
 
 
@@ -34,7 +40,7 @@ async function renderItems() {
   const container = document.getElementById('container')
 
   try {
-    const response = await fetch('http://localhost:3000/item/getData')
+    const response = await fetch('http://localhost:3000/item/getData?filter=${filter}&sort=${sortBy}');
     const data = await response.json()
 
     data.items.forEach((item) => {
@@ -66,4 +72,5 @@ fetch('http://localhost:3000/api/images')
   .catch((error) => {
     console.error('Error fetching images:', error)
   })
+
 
