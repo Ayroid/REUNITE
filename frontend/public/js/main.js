@@ -55,6 +55,18 @@ async function renderItems() {
 // Call the renderItems function to display the items
 renderItems()
 
+// Add functionality to allow users to change filter and sort options
+// For example, you can use select elements to set filter and sort parameters
+const filterSelect = document.getElementById('filter-select');
+const sortSelect = document.getElementById('sort-select');
+
+filterSelect.addEventListener('change', () => {
+    const selectedFilter = filterSelect.value;
+    const selectedSort = sortSelect.value;
+    renderItems(selectedFilter, selectedSort);
+});
+
+// Add user authentication and other features as needed
 
 fetch('http://localhost:3000/api/images')
   .then((response) => response.json())
