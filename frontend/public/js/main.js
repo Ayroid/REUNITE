@@ -50,20 +50,20 @@ async function renderItems() {
 renderItems()
 
 
-// fetch('http://localhost:3000/api/images')
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const imageContainer = document.getElementById('image-container')
+fetch('http://localhost:3000/api/images')
+  .then((response) => response.json())
+  .then((data) => {
+    const imageContainer = document.getElementById('image-container')
 
-//     data.images.forEach((filename) => {
-//       const img = document.createElement('img')
-//       img.src = `/images/${filename}`
-//       img.alt = filename // Set alt attribute for accessibility
+    data.images.forEach((filename) => {
+      const img = document.createElement('img')
+      img.src = `/images/${filename}`
+      img.alt = filename // Set alt attribute for accessibility
 
-//       imageContainer.appendChild(img)
-//     })
-//   })
-//   .catch((error) => {
-//     console.error('Error fetching images:', error)
-//   })
+      imageContainer.appendChild(img)
+    })
+  })
+  .catch((error) => {
+    console.error('Error fetching images:', error)
+  })
 
