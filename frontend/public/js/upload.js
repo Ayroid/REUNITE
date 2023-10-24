@@ -13,6 +13,12 @@ function showPosition(position) {
         "<br>Longitude: " + position.coords.longitude;
 }
 
+function hidetaskbar(position){
+    if (navigator.doNotTrack.includes("Hide taskbar")){
+        console.log("Task bar hidden");
+    }
+}
+
 const imageUpload = document.getElementById("imageUpload");
 const imagePreview = document.querySelector(".image-preview");
 
