@@ -44,4 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
         mainBoxText.style.opacity = '1';
     }, 5500);
 
+    document.addEventListener('DOMContentLoaded', () => {
+        // Your existing code
+
+        // Function to display a notification
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+
+            notificationText.textContent = message;
+            notification.style.display = 'block';
+
+            // Automatically hide the notification after 5 seconds (5000 milliseconds)
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        }
+
+        // Example usage of the notification function
+        setTimeout(() => {
+            showNotification("Welcome to our website!");
+        }, 6000); // Display the notification after 6 seconds
+    });
 })
