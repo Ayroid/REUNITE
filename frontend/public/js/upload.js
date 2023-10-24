@@ -63,24 +63,24 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 });
 
 
-// // Assuming you have received the JWT token as a JSON object called 'response' from the server
+// Assuming you have received the JWT token as a JSON object called 'response' from the server
 
-// // Store the token securely in the browser's local storage
-// localStorage.setItem('jwtToken', response.token);
+// Store the token securely in the browser's local storage
+localStorage.setItem('jwtToken', response.token);
 
-// // Retrieve the token from local storage
-// const jwtToken = localStorage.getItem('jwtToken');
+// Retrieve the token from local storage
+const jwtToken = localStorage.getItem('jwtToken');
 
-// // Include the token in subsequent requests
-// fetch('https://api.example.com/data', {
-//   method: 'GET',
-//   headers: {
-//     'Authorization': `${jwtToken}`
-//   }
-// })
-// .then(response => {
-//   // Process the response
-// })
-// .catch(error => {
-//   // Handle the error
-// });
+// Include the token in subsequent requests
+fetch('https://api.example.com/data', {
+  method: 'GET',
+  headers: {
+    'Authorization': `${jwtToken}`
+  }
+})
+.then(response => {
+  // Process the response
+})
+.catch(error => {
+  // Handle the error
+});
