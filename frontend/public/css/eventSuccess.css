@@ -175,11 +175,9 @@
     .textBox a {
         font-size: 1rem;
     }
-
 }
 
 /* User Notification */
-
 .notification {
     display: none;
     position: fixed;
