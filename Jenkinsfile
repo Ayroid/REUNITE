@@ -58,6 +58,12 @@ pipeline {
                 sh 'docker system prune -af' // Clean up Docker resources
             }
         }
+
+        stage('Done') {
+            steps{
+                echo 'done'
+            }
+        }
     }
 
     post {
