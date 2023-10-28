@@ -5,9 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
 
+        .main-div {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-heading {
+            text-align: center;
+        }
+
+        .main-heading h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .custom-line {
+            width: 50px;
+            border: 2px solid #333;
+            margin: 10px auto;
+        }
+
+        .detail-box-heading h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form input[type="text"],
+        .form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form button:hover {
+            background-color: #555;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .redirect-page {
+            margin-top: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,14 +93,13 @@
                     <h2>LOGIN</h2>
                 </div>
                 <form action="http://localhost:3000/user/login" method="post" class="form" id="loginForm">
-                    <input type="email" name="email" id="email" placeholder="EMAIL" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" required>
-                    <!-- Paste the "Remember Me" checkbox code here -->
+                    <input type="email" name="email" id="email" placeholder="Email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <input type="password" name="password" id="password" placeholder="Password" required>
                     <label>
                         <input type="checkbox" name="rememberMe" id="rememberMe">
                         <span>Remember Me</span>
                     </label>
-                    <!-- End of "Remember Me" checkbox code -->
                     <button type="submit">LOGIN</button>
                     <div class="redirect-page">New user? <a href="/register">Register</a></div>
                     <div class="error-message" id="errorMessage"></div>
