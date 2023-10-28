@@ -12,10 +12,57 @@
 
      <!-- Compiled and minified JavaScript -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-             
+            <style>
+              #featured-items {
+                padding: 20px;
+              }
+            
+              #featured-items h2 {
+                text-align: center;
+                font-size: 24px;
+                color: #333;
+              }
+            
+              .card {
+                border: 2px solid #453F3C;
+              }
+            
+              .card-image img {
+                max-height: 200px;
+              }
+            
+              .card-title {
+                font-size: 18px;
+              }
+            </style>
+
 </head>
 
 <body>
+  <style>
+    #featured-items {
+      padding: 20px;
+    }
+  
+    #featured-items h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+    }
+  
+    .card {
+      border: 2px solid #453F3C;
+    }
+  
+    .card-image img {
+      max-height: 200px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  </style>
+
     <header>
         <h1>REUNITE</h1>
     </header>
@@ -93,6 +140,46 @@
     </g>
     </svg>
         <script src="/js/main.js"></script>
+
+        <div id="featured-items" class="container">
+          <h2>Featured Items</h2>
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="your-image1.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Item 1</span>
+                  <p>Description of the first featured item.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="your-image2.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Item 2</span>
+                  <p>Description of the second featured item.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="your-image3.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Item 3</span>
+                  <p>Description of the third featured item.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     
     <!-- footer -->
     <footer class="page-footer" style="background-color: #453F3C;">
