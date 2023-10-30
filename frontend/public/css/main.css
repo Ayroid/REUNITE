@@ -63,7 +63,7 @@ header {
 }
 
 .addButton {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
   border: none;
   font-size: 16px;
