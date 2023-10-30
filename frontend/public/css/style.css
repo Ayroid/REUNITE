@@ -86,7 +86,7 @@ a:active {
     align-items: center;
     flex-direction: column;
     margin-bottom: 5rem;
-    padding: 1rem;
+    padding: 1.1rem;
 }
 
 .form input {
@@ -94,7 +94,7 @@ a:active {
     min-width: 0rem;
     border: none;
     border-bottom: 1px solid #ccc;
-    padding: 0.5rem;
+    padding: 0.51rem;
     margin: 0.5rem 0;
     text-align: center;
     font-size: 1rem;
@@ -131,7 +131,7 @@ input:active {
     font-weight: 600;
     margin: 0.5rem 0;
     text-align: center;
-    top: 5.8rem;
+    top: 5.9rem;
     position: absolute;
 }
 
@@ -141,5 +141,5 @@ input:active {
 }
 
 .redirect-page a{
-    color: rgb(29, 150, 248);
+    color: rgb(33, 152, 249);
 }
