@@ -80,7 +80,7 @@ a:active {
 }
 
 .form {
-    width: 81%;
+    width: 82%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,7 @@ a:active {
 }
 
 .form input {
-    width: 80%;
+    width: 81%;
     min-width: 0rem;
     border: none;
     border-bottom: 1px solid #ccc;
