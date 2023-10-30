@@ -80,7 +80,7 @@ a:active {
 }
 
 .form {
-    width: 80%;
+    width: 81%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +112,7 @@ input:active {
     color: #fff;
     padding: 0.8rem 3rem;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 601;
     margin: 1rem 0;
     font-size: 1rem;
 }
@@ -136,7 +136,7 @@ input:active {
 }
 
 .redirect-page {
-    margin: 0.1rem 0;
+    margin: 0.10rem 0;
     font-weight: 600;
 }
 
